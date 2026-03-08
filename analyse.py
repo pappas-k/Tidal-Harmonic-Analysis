@@ -231,7 +231,7 @@ def _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan):
     ax_err.legend(fontsize=9)
     ax_err.set_title("(d) Reconstruction accuracy", loc="left", fontweight="bold")
 
-    fig.savefig(FIG_DIR / "fig_harmonic_analysis.png", dpi=150, bbox_inches="tight")
+    fig.savefig(FIG_DIR / "fig_harmonic_analysis.png", dpi=500, bbox_inches="tight")
     plt.close(fig)
     print("  Saved fig_harmonic_analysis.png")
 
