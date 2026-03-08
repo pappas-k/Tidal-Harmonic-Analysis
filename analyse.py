@@ -134,7 +134,7 @@ def _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan):
     gs  = gridspec.GridSpec(
         3, 2, figure=fig,
         height_ratios=[1.5, 1.0, 1.8],
-        hspace=0.50, wspace=0.38,
+        hspace=0.55, wspace=0.40,
     )
     ax_sig = fig.add_subplot(gs[0, :])    # (a) signal – full width
     ax_res = fig.add_subplot(gs[1, :])    # (b) residuals – full width
