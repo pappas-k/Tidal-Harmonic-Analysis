@@ -136,6 +136,14 @@ Reconstruction accuracy improves rapidly with the number of constituents:
 
 12 constituents capture the bulk of tidal energy; the remaining error is primarily due to non-tidal (meteorological) variability not resolvable by harmonic methods.
 
+The top 3 constituents by amplitude:
+
+| Rank | Constituent | Description | Amplitude (m) | Phase (rad) |
+|:---:|:---:|---|:---:|:---:|
+| 1 | M2 | Principal lunar semi-diurnal | 4.29 | 3.44 |
+| 2 | S2 | Principal solar semi-diurnal | 1.53 | 4.52 |
+| 3 | N2 | Larger lunar elliptic semi-diurnal | 0.77 | 3.20 |
+
 ---
 
 ## Dependencies
