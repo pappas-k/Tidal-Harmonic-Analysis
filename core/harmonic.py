@@ -9,14 +9,20 @@ import pandas as pd
 import uptide
 
 
-# 39 constituents considered in the analysis (diurnal, semi-diurnal, higher harmonics)
+# 39 constituents spanning diurnal, semi-diurnal, and higher-harmonic bands
 CONSTITUENTS = [
+    # Diurnal (period ~24 h)
     "Q1", "O1", "P1", "S1", "K1", "J1", "M1",
+    # Semi-diurnal (period ~12 h) – M2 dominates at most UK sites
     "2N2", "MU2", "N2", "NU2", "M2", "L2", "T2", "S2", "K2",
     "LAMBDA2", "EPS2", "R2", "ETA2", "MSN2", "MNS2", "3M2S2", "2SM2", "MKS2",
+    # Compound tides (period ~8 h)
     "MK3", "MO3",
+    # Quarter-diurnal overtides (period ~6 h)
     "MS4", "MN4", "N4", "M4", "S4",
+    # Sixth-diurnal overtides (period ~4 h)
     "2MK6", "2MS6",
+    # Higher harmonics
     "M3", "M5", "M6", "M7", "M8",
 ]
 
