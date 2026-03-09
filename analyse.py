@@ -17,7 +17,7 @@ figures/fig_harmonic_analysis.png
 
 Usage
 -----
-    python analyse.py
+    python3 analyse.py
 """
 import datetime
 from pathlib import Path
@@ -29,8 +29,6 @@ import numpy as np
 
 from core.io       import load_bodc
 from core.harmonic import harmonic_analysis, reconstruct
-
-
 
 
 # ─────────────────────────────────────────────────────────────────────────────
