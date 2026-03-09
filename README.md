@@ -109,7 +109,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-Set the `DATA_FILE` and `START_DATE` in `analyse.py` to point to your BODC gauge CSV, then run:
+BODC gauge data can be downloaded from the [BODC data discovery portal](https://www.bodc.ac.uk/data/hosted_data_systems/sea_level/uk_tide_gauge_network/). Set the `DATA_FILE` and `START_DATE` in `analyse.py` to point to your gauge CSV, then run:
 
 ```bash
 python3 analyse.py
