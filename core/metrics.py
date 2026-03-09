@@ -48,7 +48,7 @@ def find_extrema(t: np.ndarray, eta: np.ndarray):
     -------
     t_hw, eta_hw, t_lw, eta_lw : np.ndarray
     """
-    hw_idx = find_peaks( eta)[0]
+    hw_idx = find_peaks(eta)[0]
     lw_idx = find_peaks(-eta)[0]
     return t[hw_idx], eta[hw_idx], t[lw_idx], eta[lw_idx]
 
