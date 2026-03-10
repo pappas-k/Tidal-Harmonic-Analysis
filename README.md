@@ -136,6 +136,21 @@ Reconstruction accuracy improves rapidly with the number of constituents:
 
 12 constituents capture the bulk of tidal energy; the remaining error is primarily due to non-tidal (meteorological) variability not resolvable by harmonic methods.
 
+**Tidal regime — Munk-Cartwright form factor**
+
+The form factor classifies the tidal regime based on the relative strength of diurnal and semi-diurnal constituents:
+
+$$F = \frac{K_1 + O_1}{M_2 + S_2}$$
+
+| F | Regime |
+|:---:|---|
+| < 0.25 | Semi-diurnal |
+| 0.25 – 1.5 | Mixed, predominantly semi-diurnal |
+| 1.5 – 3.0 | Mixed, predominantly diurnal |
+| > 3.0 | Diurnal |
+
+For Avonmouth: **F = 0.024** → strongly **semi-diurnal**. Two high waters and two low waters occur each day with minimal diurnal inequality, consistent with the dominance of M2.
+
 The top 3 constituents by amplitude:
 
 | Rank | Constituent | Description | Amplitude (m) | Phase (rad) |
