@@ -205,6 +205,18 @@ def _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan):
         loc="left", fontweight="bold",
     )
 
+    # Key stats annotation
+    m2_amp   = float(ha[ha["Constituent"] == "M2"]["Amplitude"].values[0])
+    nrmse_12 = nrmse_scan.get(12, float("nan"))
+    ax_sig.text(
+        0.995, 0.04,
+        f"M2 = {m2_amp:.2f} m   |   NRMSE (12 cons.) = {nrmse_12:.3f}",
+        transform=ax_sig.transAxes, fontsize=9, color="#444444",
+        ha="right", va="bottom",
+        bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.75,
+                  edgecolor="lightgrey"),
+    )
+
     # ── (b) Residuals ──────────────────────────────────────────────────────────
     for n in [2, 8, 12]:
         t_r, eta_r = reconstructions[n]
@@ -238,6 +250,7 @@ def _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan):
     ax_amp.set_yticklabels(sub["Constituent"], fontsize=9)
     ax_amp.invert_yaxis()
     ax_amp.set_xlabel("Amplitude (m)")
+    ax_amp.xaxis.grid(True, alpha=0.25, ls="--", zorder=0)
     ax_amp.set_title("(c) Constituent amplitudes (top 15)", loc="left", fontweight="bold")
     ax_amp.text(
         0.97, 0.05, "Darker = used in reconstruction",
@@ -257,6 +270,7 @@ def _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan):
     ax_err.tick_params(axis="x", labelrotation=45)
     ax_err.yaxis.set_major_formatter(ticker.FormatStrFormatter("%.3f"))
     ax_err.legend(fontsize=9)
+    ax_err.yaxis.grid(True, alpha=0.25, ls="--", zorder=0)
     ax_err.set_title("(d) Reconstruction accuracy", loc="left", fontweight="bold")
 
     fig.savefig(FIG_DIR / "fig_harmonic_analysis.png", dpi=500, bbox_inches="tight")
