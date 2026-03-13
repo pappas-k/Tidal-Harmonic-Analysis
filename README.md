@@ -163,6 +163,14 @@ The top 3 constituents by amplitude:
 
 ---
 
+## Limitations
+
+- **Stationarity assumption.** Harmonic analysis assumes constituent amplitudes and phases are constant over the analysis period. Secular changes in mean sea level or tidal characteristics (e.g. due to sea-level rise or port construction) are not captured.
+- **Non-tidal residual.** The remaining error after reconstruction (panel b) is dominated by non-tidal variability — storm surges, seiches, and river discharge — which harmonic methods cannot resolve.
+- **Rayleigh criterion.** Two constituents can only be separated if the record length exceeds the Rayleigh period T_R = 2π / |ω₁ − ω₂|. With 8.3 years of data, all 39 constituents fitted here are well resolved, including closely spaced pairs such as S2 and K2 (T_R ≈ 182 days).
+
+---
+
 ## Dependencies
 
 | Package | Purpose |
