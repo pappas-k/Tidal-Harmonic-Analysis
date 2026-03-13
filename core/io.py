@@ -40,7 +40,7 @@ def load_bodc(filepath: str, start_date: datetime.datetime):
     df = pd.DataFrame({"t": t_raw, "eta": eta_raw, "qc": qc_raw})
 
     # Drop flagged samples and physically implausible values
-    bad = df["qc"].str.contains("N|M|T", regex=True)
+    bad = df["qc"].str.strip().isin(["N", "M", "T"])
     df  = df[~bad & (df["eta"] > -15) & (df["eta"] < 15)].copy()
 
     t   = df["t"].values
