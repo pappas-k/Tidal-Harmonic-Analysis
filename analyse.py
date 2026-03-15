@@ -84,9 +84,11 @@ CON_COLS  = {                   # reconstruction colours
 def main():
     # ── 1. Load data ──────────────────────────────────────────────────────────
     print(f"Loading {LOCATION} tide gauge data …")
-    t, eta = load_bodc(str(DATA_FILE), START_DATE)
-    years  = (t[-1] - t[0]) / (365.25 * 86400)
-    print(f"  {len(t):,} observations after QC  ({years:.1f} years)")
+    t, eta, n_total = load_bodc(str(DATA_FILE), START_DATE)
+    years        = (t[-1] - t[0]) / (365.25 * 86400)
+    availability = 100.0 * len(t) / n_total
+    print(f"  {len(t):,} / {n_total:,} observations retained  "
+          f"({availability:.1f}% availability,  {years:.1f} years)")
 
     # ── 2. Harmonic analysis ──────────────────────────────────────────────────
     print("Performing harmonic analysis …")

@@ -29,6 +29,8 @@ def load_bodc(filepath: str, start_date: datetime.datetime):
         Time in seconds since start_date (non-uniform after QC).
     eta : np.ndarray
         De-meaned tidal elevation in metres.
+    n_total : int
+        Total number of rows in the file before QC (used to compute availability).
     """
     with open(filepath, encoding="utf-8") as f:
         n_rows = sum(1 for _ in f) - 2                   # data rows only
@@ -45,4 +47,4 @@ def load_bodc(filepath: str, start_date: datetime.datetime):
 
     t   = df["t"].values
     eta = df["eta"].values - df["eta"].mean()     # remove mean water level
-    return t, eta
+    return t, eta, n_rows
