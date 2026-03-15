@@ -221,7 +221,3 @@ Tide gauge records sourced from the [British Oceanographic Data Centre (BODC)](h
 
 ---
 
-## Author
-
-**Konstantinos Pappas** — PhD researcher in tidal energy resource assessment.
-GitHub: [pappas-k](https://github.com/pappas-k)
