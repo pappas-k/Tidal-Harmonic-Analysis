@@ -144,7 +144,21 @@ def main():
     # ── 6. Plot ────────────────────────────────────────────────────────────────
     print("\nPlotting …")
     _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan)
-    print(f"Figure saved to {FIG_DIR}/")
+
+    # ── 7. Summary ─────────────────────────────────────────────────────────────
+    m2_amp = float(ha[ha["Constituent"] == "M2"]["Amplitude"].values[0])
+    nrmse_12 = nrmse_scan.get(12, float("nan"))
+    var_exp  = (1.0 - nrmse_12 ** 2) * 100
+    end_date = START_DATE + datetime.timedelta(seconds=float(t[-1]))
+    print("\n" + "─" * 52)
+    print(f"  Location       : {LOCATION}  ({LAT}°N, {abs(LON)}°W)")
+    print(f"  Period         : {START_DATE:%b %Y} – {end_date:%b %Y}  ({years:.1f} yr)")
+    print(f"  Availability   : {availability:.1f}%  ({len(t):,} obs.)")
+    print(f"  M2 amplitude   : {m2_amp:.2f} m")
+    print(f"  Form factor    : {ff:.4f}  ({regime})")
+    print(f"  NRMSE (12 cons): {nrmse_12:.3f}  →  {var_exp:.1f}% variance explained")
+    print(f"  Figure         : {FIG_DIR}/fig_harmonic_analysis.png")
+    print("─" * 52)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
