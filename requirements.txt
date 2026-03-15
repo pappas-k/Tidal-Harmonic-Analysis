@@ -1,5 +1,5 @@
-uptide
-numpy
-pandas
-scipy
-matplotlib
+uptide>=1.0
+numpy>=1.24
+pandas>=2.0
+scipy>=1.9
+matplotlib>=3.6
