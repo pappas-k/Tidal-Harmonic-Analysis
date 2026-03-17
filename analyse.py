@@ -47,7 +47,7 @@ FIG_DIR = Path("figures")
 FIG_DIR.mkdir(exist_ok=True)
 
 DT          = 108.0                                          # reconstruction time-step [s]
-N_PLOT      = [2, 4, 8, 12]                                  # constituents shown in signal comparison
+N_PLOT      = [2, 8, 12]                                     # constituents shown in signal comparison
 N_SCAN      = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30] # NRMSE curve
 WINDOW_DAYS = 28                                             # days of signal shown in panel (a)
 
@@ -146,9 +146,7 @@ def main():
     _fig_harmonic_analysis(t, eta, ha, reconstructions, nrmse_scan)
 
     # ── 7. Summary ─────────────────────────────────────────────────────────────
-    m2_amp = float(ha[ha["Constituent"] == "M2"]["Amplitude"].values[0])
-    nrmse_12 = nrmse_scan.get(12, float("nan"))
-    var_exp  = (1.0 - nrmse_12 ** 2) * 100
+    m2_amp   = float(ha[ha["Constituent"] == "M2"]["Amplitude"].values[0])
     end_date = START_DATE + datetime.timedelta(seconds=float(t[-1]))
     print("\n" + "─" * 52)
     print(f"  Location       : {LOCATION}  ({LAT}°N, {abs(LON)}°W)")
@@ -156,7 +154,7 @@ def main():
     print(f"  Availability   : {availability:.1f}%  ({len(t):,} obs.)")
     print(f"  M2 amplitude   : {m2_amp:.2f} m")
     print(f"  Form factor    : {ff:.4f}  ({regime})")
-    print(f"  NRMSE (12 cons): {nrmse_12:.3f}  →  {var_exp:.1f}% variance explained")
+    print(f"  NRMSE (12 cons): {nrmse_12:.3f}  →  {var_explained:.1f}% variance explained")
     print(f"  Figure         : {FIG_DIR}/fig_harmonic_analysis.png")
     print("─" * 52)
 
