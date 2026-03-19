@@ -29,8 +29,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from core.io       import load_bodc
-from core.harmonic import harmonic_analysis, reconstruct
+from core import load_bodc, harmonic_analysis, reconstruct
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -93,7 +92,7 @@ def main():
 
     # ── 1. Load data ──────────────────────────────────────────────────────────
     print(f"Loading {LOCATION} tide gauge data …")
-    t, eta, n_total = load_bodc(str(DATA_FILE), START_DATE)
+    t, eta, n_total = load_bodc(str(DATA_FILE))
     years        = (t[-1] - t[0]) / (365.25 * 86400)
     availability = 100.0 * len(t) / n_total
     print(f"  {len(t):,} / {n_total:,} observations retained  "
