@@ -96,7 +96,7 @@ def reconstruct(
     sub = ha.head(n_constituents)
     t   = np.arange(t_start, t_start + duration, dt)
 
-    tide = uptide.Tides(list(sub["Constituent"]))
+    tide = uptide.Tides(sub["Constituent"].tolist())
     tide.set_initial_time(start_date)
     eta = tide.from_amplitude_phase(
         sub["Amplitude"].values, sub["Phase"].values, t
