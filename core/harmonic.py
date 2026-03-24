@@ -68,7 +68,7 @@ def reconstruct(
     start_date: datetime.datetime,
     dt: float = 108.0,
     t_start: float = 0.0,
-):
+) -> tuple:
     """Reconstruct a tidal signal from the top-n harmonic constituents.
 
     Parameters
