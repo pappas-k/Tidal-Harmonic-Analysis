@@ -41,7 +41,7 @@ def hm0(eta: np.ndarray) -> float:
 # Tidal extrema
 # ─────────────────────────────────────────────
 
-def find_extrema(t: np.ndarray, eta: np.ndarray):
+def find_extrema(t: np.ndarray, eta: np.ndarray) -> tuple:
     """Return times and elevations of high-water (HW) and low-water (LW) peaks.
 
     Returns
