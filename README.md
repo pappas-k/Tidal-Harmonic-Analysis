@@ -195,6 +195,14 @@ The top 3 constituents by amplitude:
 
 ---
 
+## Practical application
+
+The harmonic analysis workflow presented here underpins tidal range energy resource assessments. Pappas et al. (2023) [[1]](#references) applied this approach to quantify how the choice of harmonic constituents and analysis timeframe affects tidal range energy estimates. Using long-term tide gauge records from sites including Avonmouth, they showed that available energy estimates for a given month can vary by up to **30%** depending on which reference period is used for the harmonic fit. The study proposes a methodology for selecting representative timeframes that enable robust, like-for-like comparisons across tidal range projects — a prerequisite for reliable resource characterisation and technology screening.
+
+This workflow — fitting harmonic constituents to BODC gauge data, reconstructing the tidal signal, and quantifying accuracy as a function of constituent count — is the core preprocessing step that feeds directly into such energy assessments.
+
+---
+
 ## Limitations
 
 - **Non-tidal residual.** The remaining error after reconstruction (panel b) is dominated by non-tidal variability — storm surges, seiches, and river discharge — which harmonic methods cannot resolve.
@@ -217,6 +225,12 @@ The top 3 constituents by amplitude:
 ## Data
 
 Tide gauge records sourced from the [British Oceanographic Data Centre (BODC)](https://www.bodc.ac.uk/) — UK National Tide Gauge Network.
+
+---
+
+## References
+
+[1] K. Pappas, L. Mackie, I. Zilakos, A.H. van der Weijde, A. Angeloudis, "Sensitivity of tidal range assessments to harmonic constituents and analysis timeframe," *Renewable Energy*, vol. 205, pp. 125–141, 2023. https://doi.org/10.1016/j.renene.2023.01.062
 
 ---
 
