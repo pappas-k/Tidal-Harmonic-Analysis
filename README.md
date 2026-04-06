@@ -4,9 +4,9 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![uptide](https://img.shields.io/badge/uptide-1.0%2B-lightgrey)
 
-A clean, reproducible Python workflow for **tidal harmonic analysis** of long-term sea-level records. Starting from raw BODC tide gauge data, the project extracts harmonic constituents, reconstructs the tidal signal with increasing numbers of constituents, and quantifies accuracy — providing a rigorous foundation for tidal energy resource assessment and coastal hydrodynamic modelling.
+A clean, reproducible Python workflow for **tidal harmonic analysis** of long-term sea-level records. Starting from raw BODC tide gauge data, the project extracts harmonic constituents, reconstructs the tidal signal with increasing numbers of constituents, and quantifies accuracy, providing a rigorous foundation for tidal energy resource assessment and coastal hydrodynamic modelling.
 
-Demonstrated on **Avonmouth** (Bristol Channel, UK) — one of the highest tidal ranges in the world (~14 m spring range), driven by near-resonant amplification in the Bristol Channel funnel geometry.
+Demonstrated on **Avonmouth** (Bristol Channel, UK), one of the highest tidal ranges in the world (~14 m spring range), driven by near-resonant amplification in the Bristol Channel funnel geometry.
 
 ---
 
